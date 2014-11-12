@@ -51,6 +51,10 @@ NSString *UI7TabBarStyle = @"UI7TabBarStyle";
 - (void)_tintColorUpdated {
     [super _tintColorUpdated];
     self.selectedImageTintColor = self.superview.tintColor;
+    NSString * name = [@"_set" stringByAppendingString:@"LabelTextColor:selectedTextColor:"];
+    SEL selector = NSSelectorFromString(name);
+    IMP impl = class_getMethodImplementation(self.class, selector);
+    impl(self, selector, [UIColor grayColor], self.tintColor);
 }
 
 @end
