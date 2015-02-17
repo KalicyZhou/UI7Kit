@@ -83,7 +83,7 @@ UIColor *UI7ButtonDefaultTitleColor = nil;
                 textTitleColor = self.tintColor;
             }
             [self __setTitleColor:textTitleColor forState:UIControlStateNormal];
-            UIColor *highlightedTextTitleColor = textTitleColor.highligtedColor;
+            UIColor *highlightedTextTitleColor = [self titleColorForState:UIControlStateSelected];
             [self __setTitleColor:highlightedTextTitleColor forState:UIControlStateHighlighted];
             [self __setTitleColor:highlightedTextTitleColor forState:UIControlStateSelected];
         }   break;
