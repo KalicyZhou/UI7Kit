@@ -89,7 +89,7 @@ NSString *UI7TabBarStyle = @"UI7TabBarStyle";
     name = [@"_set" stringByAppendingString:@"LabelFont:"];
     selector = NSSelectorFromString(name);
     impl = class_getMethodImplementation(self.class, selector);
-    impl(self, selector, [UI7Font systemFontOfSize:10.0 attribute:UI7FontAttributeLight]);
+    impl(self, selector, [UI7Font systemFontOfSize:11.0 attribute:UI7FontAttributeLight]);
     name = [@"_set" stringByAppendingString:@"LabelShadowOffset:"];
     selector = NSSelectorFromString(name);
     impl = class_getMethodImplementation(self.class, selector);
