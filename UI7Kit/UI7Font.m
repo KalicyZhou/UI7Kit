@@ -88,7 +88,8 @@ NSString *UI7FontWeightBold = @"Bold";
 @implementation UIFont (UI7Kit)
 
 + (UIFont *)iOS7SystemFontOfSize:(CGFloat)fontSize attribute:(NSString *)attribute {
-    return [UIFont fontWithName:@"MicrosoftYaHei" size:fontSize];
+    NSString *fontName = attribute ? [@"HelveticaNeue-%@" format:attribute] : @"Helvetica Neue";
+    return [UIFont fontWithName:fontName size:fontSize];
 }
 
 + (UIFont *)iOS7SystemFontOfSize:(CGFloat)fontSize {
